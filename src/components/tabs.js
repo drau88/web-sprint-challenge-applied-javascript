@@ -17,22 +17,28 @@ const Tabs = (topics) => {
   //
 
   const topicDiv = document.createElement('div');
-  const tabDivOne = document.createElement('div');
-  const tabDivTwo = document.createElement('div');
-  const tabDivThree = document.createElement('div');
+  // const tabDivOne = document.createElement('div');
+  // const tabDivTwo = document.createElement('div');
+  // const tabDivThree = document.createElement('div');
 
   topicDiv.classList.add('topics');
-  tabDivOne.classList.add('tab');
-  tabDivTwo.classList.add('tab');
-  tabDivThree.classList.add('tab');
+  // tabDivOne.classList.add('tab');
+  // tabDivTwo.classList.add('tab');
+  // tabDivThree.classList.add('tab');
+  topics.forEach(item => {
+    const tabDiv = document.createElement('div');
+    tabDiv.classList.add('tab');
+    tabDiv.textContent = item;
+    topicDiv.appendChild(tabDiv);
 
-  topicDiv.appendChild(tabDivOne);
-  topicDiv.appendChild(tabDivTwo);
-  topicDiv.appendChild(tabDivThree);
+  })
+  // topicDiv.appendChild(tabDivOne);
+  // topicDiv.appendChild(tabDivTwo);
+  // topicDiv.appendChild(tabDivThree);
 
-  tabDivOne.textContent = topics[0];
-  tabDivTwo.textContent = topics[1];
-  tabDivThree.textContent = topics[2];
+  // tabDivOne.textContent = topics[0];
+  // tabDivTwo.textContent = topics[1];
+  // tabDivThree.textContent = topics[2];
 
   return topicDiv;
 }
