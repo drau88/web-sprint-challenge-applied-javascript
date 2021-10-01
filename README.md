@@ -60,7 +60,12 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+    A: DOM stands for Document Object Model. In practical terms for web development, the DOM is a methodology for creating HTML documents by treating HTML components as node objects that can be created, manipulated and injected into web documents using JavaScript.
 2. What is an event?
+    A: An event refers to some form of input or situation occurring within a particular environment. For JavaScript programming, events are things like user inputs which can be captured and used as conditions for adding additional functionality to web documents or programs.
 3. What is an event listener?
+    A: With specific regard to web development, event listeners refer to any block of code created for the purpose of triggering or executing when they detect the desired events occurring within the interface.
 4. Why would we convert a NodeList into an Array?
+    A: Converting a NodeList to an array frequently makes the data contained therein easier to work with. Compared to objects, arrays have sophisticated methods for iteration and modification which can make larger sets of data easier to work with and more flexible at handling changes as the data is altered or grows in scale.
 5. What is a component?
+    A: Under the Document Object Model, components are JavaScript functions designed to take data and create frequently recurring sections of HTML structure within a web document without having to continually update, add and reuse elements in an actual HTML file.

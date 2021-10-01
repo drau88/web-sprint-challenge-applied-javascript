@@ -61,10 +61,8 @@ const cardAppender = (selector) => {
   //
   axios.get('http://localhost:5000/api/articles')
     .then(response => {
-      console.log(response);
       const cardEntryPoint = document.querySelector(selector);
-      // console.log(response.data.articles.bootstrap);
-      // console.log(response.data.articles.bootstrap.length);
+      //Iterations over individual topic arrays because all attempts at converting earlier objects in the data to arrays result in empty arrays.
       for (let i = 0; i < response.data.articles.bootstrap.length; i++){
         const articleCardContentObj = Card(response.data.articles.bootstrap[i]);
         console.log(articleCardContentObj);
