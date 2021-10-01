@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const Card = (article) => {
   // TASK 5
   // ---------------------
@@ -57,6 +59,43 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+  axios.get('http://localhost:5000/api/articles')
+    .then(response => {
+      console.log(response);
+      const cardEntryPoint = document.querySelector(selector);
+      // console.log(response.data.articles.bootstrap);
+      // console.log(response.data.articles.bootstrap.length);
+      for (let i = 0; i < response.data.articles.bootstrap.length; i++){
+        const articleCardContentObj = Card(response.data.articles.bootstrap[i]);
+        console.log(articleCardContentObj);
+        cardEntryPoint.appendChild(articleCardContentObj); 
+      }
+      for (let i = 0; i < response.data.articles.javascript.length; i++){
+        const articleCardContentObj = Card(response.data.articles.javascript[i]);
+        console.log(articleCardContentObj);
+        cardEntryPoint.appendChild(articleCardContentObj); 
+      }
+      for (let i = 0; i < response.data.articles.jquery.length; i++){
+        const articleCardContentObj = Card(response.data.articles.jquery[i]);
+        console.log(articleCardContentObj);
+        cardEntryPoint.appendChild(articleCardContentObj); 
+      }
+      for (let i = 0; i < response.data.articles.node.length; i++){
+        const articleCardContentObj = Card(response.data.articles.node[i]);
+        console.log(articleCardContentObj);
+        cardEntryPoint.appendChild(articleCardContentObj); 
+      }
+      for (let i = 0; i < response.data.articles.technology.length; i++){
+        const articleCardContentObj = Card(response.data.articles.technology[i]);
+        console.log(articleCardContentObj);
+        cardEntryPoint.appendChild(articleCardContentObj); 
+      }
+     
+    })
+    .catch(error => {
+      console.log(error);
+    })
+
 }
 
 export { Card, cardAppender }
